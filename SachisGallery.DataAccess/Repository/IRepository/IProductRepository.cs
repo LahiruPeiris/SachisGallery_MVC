@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SachisGallery.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace SachisGallery.DataAccess.Repository.IRepository
 {
-    public interface IUnitOfWork
+    public interface IProductRepository: IRepository<Product>
     {
-        public ICategoryRepository Category { get; }
-        public IProductRepository Product { get; }
-        void Save();
+        void Update(Product product);
     }
 }
